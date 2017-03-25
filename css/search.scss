@@ -1,0 +1,44 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+.search-wrap {
+	padding:0;
+}
+.radials {
+	padding-top:20px;
+font-weight: $base-fw - 100 !important;
+font-size:$base-fsz - 2.5em; 
+	padding-left: 40px;
+	input {
+		margin-top:10px;
+		font-weight: $base-fw - 100 !important;
+	}
+}
+.search-headline {
+	width:100%;
+	background:$base-color;
+	h2 {
+		padding:43px 0;
+		color:#fff;
+		margin-top: 0;
+		font-weight: $base-fw + 300;	
+	}
+}
+.btn2 {
+	width:80% !important;
+	margin:0 auto !important;
+	float: none !important;
+	display: block;
+}
+
+.search-input {
+	input {
+		width: 80% !important;
+		height: 59px;
+		padding-left: 15px !important;
+		border-radius: 100px;
+		margin:0 auto !important;
+		float: none !important;
+		display: block;
+		text-transform: uppercase;
+	}
+}

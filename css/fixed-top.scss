@@ -1,0 +1,76 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+.pagewidth {
+    max-width: 1200px;
+    width: 100%;
+    background: none;
+    margin:0 auto;
+}
+.top {
+    top: 0;
+    height: 31px;
+    width: 100%;
+    background: $base-color;
+    margin: 0;
+    padding: 0;
+    font-weight: $base-fw + 300;
+    font-size: 14px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    z-index: 99999;
+    p {
+    	margin: 0;
+		padding: 0;
+    }
+}
+
+.top-right {
+    float: right;
+    width: 100%;
+    @include breakpoint(big_screen1){
+        width:100%;
+    }
+}
+.custom {
+        float: right;
+        ul {
+            padding-right:70px;
+            @include breakpoint(big_screen1){
+                display: none;
+            }
+            li {
+                float: right;
+                list-style-type: none;
+                a {
+                    font-weight: $base-fw - 100;
+                    padding:0 15px;
+                    color: #fff;
+                }
+            }
+        }
+    }
+.call-us {
+    background: $secondary-color;
+        a {
+         color: #fff;
+         display: inline-block;
+         padding:0 10px;
+         font-weight: $base-fw - 100;
+        }
+    }
+
+p.rfq {
+	    padding: 0;
+	    margin: 0;
+	    line-height: 27px;
+	    font-size: 18px;
+	    text-transform: none !important;
+	    a {
+	    	    color: #fff;
+			    margin: 0;
+                padding:0 15px;
+			    line-height: 27px;
+			    font-weight: $base-fw - 100;
+			   font-size: $base-fsz - 3.3em;
+			}
+	    }

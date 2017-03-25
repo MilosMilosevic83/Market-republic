@@ -1,0 +1,314 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+.header-wrap {
+	padding:0;
+}
+.cover {
+	overflow:hidden;
+	float:left;
+	width:100%;
+}
+
+.banner-wrap{
+	height:650px;
+	background:url('../img/background.jpg') no-repeat center center;
+	@include stretch(cover);
+	clear: both;
+	padding:0;
+	@include breakpoint(medium_screen1){
+		 	background:$dark-green;
+		 	height:700px;
+		 }
+}
+.tablet {
+	display:none;
+	@include breakpoint(medium_screen1){
+		 	display: block;
+		 	
+		 }
+	img {
+		display: block;
+		max-width: 550px;
+		width:100%;
+		margin:0 auto;
+
+	}
+}
+.cover-caption {
+	clear:both;
+	padding:210px 15px;
+	max-width:1200px;
+	width:100%;
+	margin:0 auto;
+	@include breakpoint(medium_screen1){
+		 	padding:50px 0;
+		 }
+		h1 {
+		text-align: left;
+		font-size:$base-fsz - .8em;
+		color:#fff;
+		font-weight: $base-fw + 300;
+		margin:0;
+		font-family: $font;
+		letter-spacing: 1px;
+		line-height: 45px;
+		@include breakpoint(big_screen1){
+		 	width: 40%;
+		 }
+		@include breakpoint(medium_screen1){
+		 	text-align:center;
+		 	width: 100%;
+		 }
+
+	}
+	h2 {
+		color:#fff;
+		line-height: 45px;
+		font-weight: $base-fw + 300;
+		font-size: 2.5em;
+		@include breakpoint(medium_screen1){
+		 	text-align:center;
+		 	font-size: $base-fsz - 2em;
+		 	
+		 }
+		 @include breakpoint(small_screen1){
+		 	text-align:center;
+		 	font-size: $base-fsz - 2.5em;
+		 	line-height: 35px;
+		 }
+	}
+	span {
+		background:$base-color;
+		padding:2px 10px;
+		&:nth-child(1){
+			font-size: .7em;
+		}
+	}
+}
+
+.clear {
+	clear:both;
+	width:100%;
+	height:1px;
+
+	display:block;
+}
+.wrap-content {
+	display:block;
+	padding:0;
+	clear:both;
+	margin:0 auto;
+	position:relative;
+	z-index: 2000;
+	@include breakpoint(medium_screen1){	
+			@include box-shadow(3px 3px 18px 4px rgba(#000, 0.4));
+		}
+	}
+.about-wrap {
+	text-align:left;
+	padding:50px 15px;
+	@include breakpoint(big_screen1){
+		background:#fff;
+		padding:15px;
+		}
+	h2 {
+		color: $dark-green;
+		line-height: 40px;
+		@include breakpoint(big_screen1){
+		 	text-align:center;
+		 	
+		 	}
+		}
+	p {
+		padding:0;
+		line-height: 45px;
+		font-size: $base-fsz - 2.4em;
+		font-weight: $base-fw - 100;
+		position: relative;
+		color: #000;
+		text-align:left;
+		@include breakpoint(big_screen1){
+		 	text-align:center;
+		 	line-height: 30px;
+		 }
+		 @include breakpoint(small_screen1){
+		 	text-align:left;
+		 	line-height: 30px;
+		 	font-size: 1.4em;
+		 }
+		span {
+			padding-left:30px;
+			position:relative;
+			padding:0 30px;
+			&:before {
+				content:url(../img/check.png);
+				left:0;
+				top: -10px;
+				position: absolute;
+				@include breakpoint(big_screen1){
+				 	top: 0;
+				 }
+			}
+			&:nth-child(9){
+				font-size:  $base-fsz - 3em;
+				display: block;
+				padding-top:50px;
+				padding-left:0;
+				&:before {
+				content:" ";
+				}
+			}
+		}
+	}
+}
+.txt {
+	font-weight: $base-fw - 100 !important;
+	margin:30px 0;
+	display:block;
+	font-size:2.2em !important;
+	@include breakpoint(small_screen1){
+		 	text-align:center !important;
+		 }
+}
+#commentForm{
+	p {
+		font-size: 1em !important;
+	}
+}
+.form-wrap {
+	padding:0 0 30px 0;
+	@include breakpoint(big_screen1){
+		 	overflow: hidden;
+		 }
+	@include breakpoint(medium_screen1){
+		 	background:#F8F8F8;
+		 	@include box-shadow(0px 0px 18px 1px rgba(#7B7F7E, 0.15));
+		 }
+	h2 {
+		margin-top: 102px;
+		color: $dark-green;
+		font-weight: $base-fw - 100;
+		text-align: center;
+	}
+	p {
+		font-weight: $base-fw - 100;
+		text-align: center;
+		font-size: $base-fsz - 2.6em;
+	}
+	.center-form {
+	  max-width: 460px;
+	  width:100%;
+	  margin:0 auto;
+	  overflow: hidden;
+	  padding:20px;
+	  @include breakpoint(medium_screen1){
+		 	float: none;
+		 	margin:0 auto;
+		 }
+	}
+
+	form {
+	  margin-top: 35px;
+	  @include rounded(2px);
+	  font: $font;
+	  overflow: hidden;
+	  padding:20px 48px;
+	  background: #F8F8F8;
+	  border:1px solid #e5e5e5;
+	  @include box-shadow(0px 0px 18px 1px rgba(#7B7F7E, 0.15));
+	  @include breakpoint(medium_screen1){
+		 	padding:20px 0;
+		 	border:0;
+		 	background:transparent;
+		 	@include box-shadow(none);
+		 }
+	  p {
+	  	text-align: left;
+	  	span {
+	  		color:red;
+	  	}
+	  }
+	  
+	}
+	fieldset {
+	  border: 0;
+	  margin: 0;
+	  padding: 0;
+	}
+	input {
+	   @include rounded(4px);
+	  font: $font;
+	  margin: 0;
+	}
+	.account-info {
+	  padding: 0;
+	}
+	.account-info {
+	  label {
+	  color: #646464;
+	  display: block;
+	  font-size: $base-fsz - 2.6em;
+	  font-weight: $base-fw - 100;
+	  margin-bottom: 10px;
+	  text-align:left;
+	  span {
+	  	color:red;
+	   }
+	  }
+	  input {
+	    background: #fff;
+	    border: 1px solid #e5e5e5;
+	     box-shadow: none;
+	    color: #636466;
+	    padding: 6px;
+	    margin-top: 6px;
+	    width: 100%;
+	  }
+	}
+
+
+	.account-action {
+	  padding: 10px 0 0 0;
+	    .btn {
+	    background: linear-gradient(#49708f, #293f50);
+	    border: 0;
+	    @include transition(all 0.3s ease);
+	    font-size: 16px;
+		line-height: 16px;
+		color: white;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		padding: 20px;
+		width:100%;
+		margin: 0;
+		@include rounded(4px);
+		background:  $secondary-color;
+	    float: left;
+	    @include transition(.8s);
+	    &:hover {
+	    	background:$base-color;
+	    }
+	  }
+	}
+}
+.error {
+	font-size:$base-fsz - 3em !important;
+	color:red !important;
+}
+
+.pointer {
+	background:$dark-green;
+	padding:27px 0;	
+	color:#fff;
+	font-size:$base-fsz - 2em;	
+	font-weight: $base-fw + 300 !important;
+	position:relative;
+	margin-top:60px;
+	&:after {
+		content:url(../img/arr.png);
+		position:absolute;
+		left:45%;
+		top:60px;
+		}
+	}
